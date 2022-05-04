@@ -1,0 +1,16 @@
+{
+    "dev": {
+        "driver": "pg",
+        "host": "127.0.0.1",
+        "database": "storefrontAPI",
+        "user": "martinudacity",
+        "password": "password123"
+    },
+    "test": {
+        "driver": "pg",
+        "host": "127.0.0.1",
+        "database": "storefrontAPI_test",
+        "user": "martinudacity",
+        "password": "password123"
+    }
+}
