@@ -1,5 +1,23 @@
 # Storefront Backend Project
 
+## Setup instructions
+
+### Database setup
+
+I have decided to not user Docker. Instead I have gone for a direct connection to a Postgres DB. The configuration of the DB has to be specified in the .env file. The following variables (see the dummy ones I used below) are required:
+POSTGRES_HOST=127.0.0.1
+POSTGRES_DB=storefrontAPI
+POSTGRES_TEST_DB=storefrontAPI_test
+POSTGRES_user=martinudacity
+POSTGRES_PASSWORD=password123
+ENV=test
+BCRYPT_PASSWORD=speak-friend-and-enter
+SALT_ROUNDS=10
+TOKEN_SECRET=alabama123
+TESTING_TOKEN=<JWT token here>
+
+## Original project description by udacity
+
 ## Getting Started
 
 This repo contains a basic Node and Express app to get you started in constructing an API. To get started, clone this repo and run `yarn` in your terminal at the project root.
@@ -31,7 +49,7 @@ Table: Books (id:varchar, title:varchar, author:varchar, published_year:varchar,
 
 ### 2.  DB Creation and Migrations
 
-Now that you have the structure of the databse outlined, it is time to create the database and migrations. Add the npm packages dotenv and db-migrate that we used in the course and setup your Postgres database. If you get stuck, you can always revisit the database lesson for a reminder. 
+Now that you have the structure of the database outlined, it is time to create the database and migrations. Add the npm packages dotenv and db-migrate that we used in the course and setup your Postgres database. If you get stuck, you can always revisit the database lesson for a reminder. 
 
 You must also ensure that any sensitive information is hashed with bcrypt. If any passwords are found in plain text in your application it will not pass.
 

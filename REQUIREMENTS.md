@@ -17,8 +17,8 @@ These are the notes from a meeting with the frontend developer that describe wha
 - Create N[token required] 'users/create' [POST]
 
 #### Orders
-- Current Order by user (args: user id)[token required] 'orders/:userId' [GET]
-- [OPTIONAL] Completed Orders by user (args: user id)[token required] 'orders/history/:userId' [GET]
+- Current Order by user (args: user id)[token required] 'orders/showCurrentOrderOfUser/:user_Id' [GET]
+- [OPTIONAL] Completed Orders by user (args: user id)[token required] 'orders/history/:user_Id' [GET]
 
 ## Data Shapes
 #### Product
