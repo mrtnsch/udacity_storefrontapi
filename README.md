@@ -5,16 +5,16 @@
 ### Database setup
 
 I have decided to not user Docker. Instead I have gone for a direct connection to a Postgres DB. The configuration of the DB has to be specified in the .env file. The following variables (see the dummy ones I used below) are required:
-POSTGRES_HOST=127.0.0.1
-POSTGRES_DB=storefrontAPI
-POSTGRES_TEST_DB=storefrontAPI_test
-POSTGRES_user=martinudacity
-POSTGRES_PASSWORD=password123
-ENV=test
-BCRYPT_PASSWORD=speak-friend-and-enter
-SALT_ROUNDS=10
-TOKEN_SECRET=alabama123
-TESTING_TOKEN=<JWT token here>
+- POSTGRES_HOST=127.0.0.1
+- POSTGRES_DB=storefrontAPI
+- POSTGRES_TEST_DB=storefrontAPI_test
+- POSTGRES_user=martinudacity
+- POSTGRES_PASSWORD=password123
+- ENV=test
+- BCRYPT_PASSWORD=speak-friend-and-enter
+- SALT_ROUNDS=10
+- TOKEN_SECRET=alabama123
+- TESTING_TOKEN=<JWT token here>
 
 ## Original project description by udacity
 
