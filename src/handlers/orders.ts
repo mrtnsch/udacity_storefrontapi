@@ -2,8 +2,6 @@ import express, {Request, Response} from 'express';
 import {Order,OrderStore} from '../models/order';
 import { verifyAuthToken } from './users';
 
-//todo: write test for Order handler
-
 const store = new OrderStore();
 
 const create = async (_req:Request, res:Response) => {

@@ -2,8 +2,6 @@ import express, {Request, Response} from 'express';
 import {Product,ProductStore} from '../models/product';
 import { verifyAuthToken } from './users';
 
-//todo: write test for Product handler
-
 const store = new ProductStore();
 
 const create = async (_req:Request, res:Response) => {
