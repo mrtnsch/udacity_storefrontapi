@@ -8,6 +8,7 @@ describe("Tests for Product model", () => {
       price: 14.20,
       category:"Living"
       }
+
  
       it("Requesting id created should return a product", async () => {
         const result = await store.show(1);

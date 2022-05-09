@@ -42,7 +42,6 @@ exports.__esModule = true;
 exports.verifyAuthToken = void 0;
 var user_1 = require("../models/user");
 var jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-//todo: write test for user handler
 var store = new user_1.UserStore();
 var verifyAuthToken = function (req, res, next) {
     try {
@@ -52,7 +51,7 @@ var verifyAuthToken = function (req, res, next) {
         next();
     }
     catch (error) {
-        res.status(401);
+        res.status(401).send("Please authenticate before proceeding");
     }
 };
 exports.verifyAuthToken = verifyAuthToken;
@@ -93,6 +92,7 @@ var authenticate = function (_req, res) { return __awaiter(void 0, void 0, void 
             case 0: return [4 /*yield*/, store.authenticate(_req.body.firstname, _req.body.lastname, _req.body.password)];
             case 1:
                 authUser = _a.sent();
+                console.log(authUser);
                 if (authUser == null) {
                     res.status(403).send("invalid user credentials");
                 }

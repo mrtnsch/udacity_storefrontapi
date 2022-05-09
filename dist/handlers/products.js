@@ -38,7 +38,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 var product_1 = require("../models/product");
 var users_1 = require("./users");
-//todo: write test for Product handler
 var store = new product_1.ProductStore();
 var create = function (_req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var product, createdProduct, err_1;

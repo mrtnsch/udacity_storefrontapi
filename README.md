@@ -8,13 +8,12 @@ I have decided to not user Docker. Instead I have gone for a direct connection t
 - POSTGRES_HOST=127.0.0.1
 - POSTGRES_DB=storefrontAPI
 - POSTGRES_TEST_DB=storefrontAPI_test
-- POSTGRES_user=martinudacity
+- POSTGRES_USER=martinudacity
 - POSTGRES_PASSWORD=password123
 - ENV=test
 - BCRYPT_PASSWORD=speak-friend-and-enter
 - SALT_ROUNDS=10
 - TOKEN_SECRET=alabama123
-- TESTING_TOKEN=<JWT token here>
 
 ## Original project description by udacity
 

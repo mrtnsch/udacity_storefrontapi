@@ -2,8 +2,6 @@ import express, {Request, Response} from 'express';
 import {User,UserStore} from '../models/user';
 import jwt from 'jsonwebtoken';
 
-//todo: write test for user handler
-
 const store = new UserStore();
 
 export const verifyAuthToken = (req: Request, res: Response, next:Function) => {
@@ -13,7 +11,7 @@ export const verifyAuthToken = (req: Request, res: Response, next:Function) => {
         const decoded = jwt.verify(token,process.env.TOKEN_SECRET as string)
         next()
     } catch (error) {
-        res.status(401)
+        res.status(401).send("Please authenticate before proceeding") ;
     }
 }
 
