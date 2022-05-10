@@ -4,16 +4,54 @@
 
 ### Database setup
 
-I have decided to not user Docker. Instead I have gone for a direct connection to a Postgres DB. The configuration of the DB has to be specified in the .env file. The following variables (see the dummy ones I used below) are required:
+I have decided to not user Docker. Instead I have gone for a direct connection to a Postgres DB. The configuration of the connection DB has to be specified in the .env file. You can choose any database names you like as long as you specifiy them in the .env file. 
+
+Please see example setup commands here:
+
+Switching to postgres user and starting psql
+```
+su postgres
+psql postgres
+```
+Creating an user
+```
+CREATE USER storefrontAdmin WITH PASSWORD 'password123';
+```
+Creating the databases
+```
+CREATE DATABASE storefrontAPI;
+CREATE DATABASE storefrontAPI_test;
+```
+Granting privileges
+```
+\c storefrontAPI
+GRANT ALL PRIVILEGES ON DATABASE storefrontAPI TO storefrontAdmin;
+\c storefrontAPI_test
+GRANT ALL PRIVILEGES ON DATABASE storefrontAPI_test TO storefrontAdmin;
+```
+
+### Running migrations
+Make sure to install all dependencies using npm or yarn.
+
+Run migrations with
+```
+db-migrate up
+```
+
+### Setting up the .env file and connecting to the DB
+
+The following variables (see the dummy ones I used below) are required:
 - POSTGRES_HOST=127.0.0.1
 - POSTGRES_DB=storefrontAPI
 - POSTGRES_TEST_DB=storefrontAPI_test
-- POSTGRES_USER=martinudacity
+- POSTGRES_USER=storefrontAdmin
 - POSTGRES_PASSWORD=password123
 - ENV=test
 - BCRYPT_PASSWORD=speak-friend-and-enter
 - SALT_ROUNDS=10
 - TOKEN_SECRET=alabama123
+
+Once your .env variables are configured correctly, you will be able to connect to the database.
 
 ## Original project description by udacity
 
